@@ -393,6 +393,216 @@
     --library-poster-height: 156px !important;
   }
 
+  /* ------------------------------------------------------------------------
+   * Remaining views: detail, discover, stream, see-all, folder, cast, player
+   * and the profile editor still use TV-scale type. Same phone pass as above.
+   * ---------------------------------------------------------------------- */
+
+  /* Big titles */
+  .series-detail-title,
+  .movie-detail-title,
+  .meta-details-title,
+  .cast-detail-name,
+  .folder-follow-hero-title,
+  .profile-title {
+    font-size: 26px;
+    line-height: 1.2;
+  }
+
+  /* Section / card headings */
+  .movie-cast-heading,
+  .series-detail-section-title,
+  .meta-details-section-title,
+  .stream-route-card-heading,
+  .search-seeall-label,
+  .profile-dialog-title,
+  .player-startup-error-title {
+    font-size: 17px;
+    line-height: 1.25;
+  }
+
+  /* Body copy */
+  .series-detail-description,
+  .movie-detail-description,
+  .meta-details-description,
+  .discover-empty-copy,
+  .stream-route-card-line,
+  .stream-route-addon-badge span,
+  .profile-dialog-subtitle,
+  .profile-name,
+  .cast-detail-meta,
+  .folder-follow-hero-subtitle {
+    font-size: 13px;
+    line-height: 1.35;
+  }
+
+  /* Small labels / badges */
+  .profile-badge,
+  .profile-avatar-category,
+  .stream-route-addon-badge {
+    font-size: 11px;
+  }
+
+  /* Oversized glyphs / decorative icons */
+  .discover-empty-icon {
+    font-size: 56px;
+  }
+
+  .search-seeall-arrow {
+    font-size: 26px;
+  }
+
+  .profile-primary-dot {
+    font-size: 16px;
+  }
+
+  .catalog-order-action .material-icons,
+  .player-title {
+    font-size: 24px;
+  }
+
+  /* ------------------------------------------------------------------------
+   * Detail screen (movie / series). Built for a TV: a 620px-min hero, 66-96px
+   * action buttons, 194px cast avatars and 300px "more like this" posters.
+   * Bring the whole page down to phone scale.
+   * ---------------------------------------------------------------------- */
+  .detail-hero-section {
+    min-height: 46vh;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .series-detail-content {
+    max-width: 100vw;
+    padding: 16px 16px calc(90px + env(safe-area-inset-bottom, 0px));
+  }
+
+  /* Action row: Play + circular buttons */
+  .series-primary-btn {
+    height: 44px;
+    padding: 0 20px;
+    font-size: 15px;
+  }
+
+  .series-secondary-btn {
+    min-height: 44px;
+    padding: 0 16px;
+    font-size: 14px;
+  }
+
+  .series-circle-btn {
+    width: 44px;
+    height: 44px;
+  }
+
+  .series-btn-icon {
+    font-size: 18px;
+  }
+
+  .series-season-btn {
+    height: 36px;
+    padding: 0 14px;
+    font-size: 14px;
+  }
+
+  /* Meta line, support text and section headers */
+  .series-detail-support,
+  .detail-meta-row,
+  .detail-meta-row.secondary {
+    font-size: 13px;
+  }
+
+  .detail-meta-badge {
+    font-size: 11px;
+    padding: 4px 8px;
+  }
+
+  .series-insight-tab,
+  .series-insight-divider {
+    font-size: 14px;
+  }
+
+  .detail-trailer-hint,
+  .detail-trailer-subtitle,
+  .detail-comments-subtitle,
+  .detail-company-title {
+    font-size: 12px;
+  }
+
+  .detail-trailer-title {
+    font-size: 16px;
+  }
+
+  /* Cast row */
+  .movie-cast-avatar {
+    width: 72px;
+    height: 72px;
+  }
+
+  .movie-cast-name {
+    font-size: 13px;
+  }
+
+  .movie-cast-role {
+    font-size: 11px;
+  }
+
+  /* "More like this" / company / comment cards */
+  .detail-morelike-poster {
+    height: 156px;
+  }
+
+  .detail-morelike-name {
+    font-size: 12px;
+  }
+
+  /* Secondary meta line ("141 min · United States") + wrap the insight tabs
+     instead of letting them overlap. */
+  .series-detail-meta,
+  .detail-meta-stack {
+    font-size: 13px;
+  }
+
+  .series-insight-tabs {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  .series-insight-tabs::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Discover: 248px-min grid with 372px posters renders one per row. Force a
+     phone-size multi-column grid like the library. */
+  .discover-grid {
+    grid-template-columns: repeat(auto-fill, minmax(104px, 1fr)) !important;
+    gap: 12px;
+  }
+
+  .discover-card {
+    width: auto !important;
+  }
+
+  .discover-card-poster {
+    height: 156px !important;
+  }
+
+  .discover-results-title {
+    font-size: 17px;
+  }
+
+  .discover-results-subtitle {
+    font-size: 13px;
+  }
+
+  /* Settings "Manage Profiles" / account action buttons are full-height TV
+     targets; size them like a normal row. */
+  .settings-account-action-button {
+    min-height: 0;
+    padding: 16px 18px;
+  }
+
   /* Empty states and section headers use TV-scale type; bring them down so they
      fit a phone without clipping. */
   .search-empty-state h2 {
