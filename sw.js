@@ -12,7 +12,7 @@
  * run from a packaged container and never reach this file.
  */
 
-var CACHE_VERSION = "nuvio-pwa-v1";
+var CACHE_VERSION = "nuvio-pwa-v2";
 var SHELL_CACHE = CACHE_VERSION + "-shell";
 var RUNTIME_CACHE = CACHE_VERSION + "-runtime";
 

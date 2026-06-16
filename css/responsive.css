@@ -251,6 +251,148 @@
     overflow: visible;
   }
 
+  /* ------------------------------------------------------------------------
+   * Phone typography pass.
+   *
+   * Most screens use fixed TV-scale type (40-56px titles, 22-28px body), so
+   * even after the layout fixes the text still reads like a 10-foot UI. Cap
+   * the headings, body copy and oversized glyphs to phone sizes across the
+   * account, addons, library, search and settings screens.
+   * ---------------------------------------------------------------------- */
+
+  /* Page titles */
+  .account-title,
+  .qr-title,
+  .addons-title,
+  .settings-title,
+  .library-page-title,
+  .search-results-title,
+  .catalog-order-title,
+  .settings-trakt-title,
+  .library-manage-title {
+    font-size: 24px;
+    line-height: 1.2;
+  }
+
+  /* Card / section titles */
+  .qr-card-title,
+  .addons-subtitle,
+  .addons-install-heading,
+  .addons-installed-head h3,
+  .addons-empty,
+  .addons-large-row-copy strong,
+  .settings-group-title,
+  .settings-row-title,
+  .settings-subsection-card .settings-row-title,
+  .settings-profile-manage-row .settings-row-title,
+  .settings-trakt-card-title,
+  .settings-dialog-title,
+  .library-grid-title,
+  .library-empty-title,
+  .library-dialog-title,
+  .catalog-order-card-copy h2,
+  .catalog-order-empty,
+  .catalog-order-card-title {
+    font-size: 17px;
+    line-height: 1.25;
+  }
+
+  /* Subtitles, descriptions and body copy */
+  .account-subtitle,
+  .settings-subtitle,
+  .account-settings-subtitle,
+  .qr-description,
+  .qr-card-subtitle,
+  .qr-status,
+  .addons-lede,
+  .addons-meta,
+  .addons-sync-status,
+  .addons-installed-description,
+  .addons-installed-meta,
+  .addons-large-row-copy small,
+  .settings-group-subtitle,
+  .settings-row-subtitle,
+  .settings-row-value,
+  .settings-subsection-card .settings-row-subtitle,
+  .settings-subsection-card .settings-row-value,
+  .settings-account-description,
+  .settings-account-profile-name,
+  .settings-account-status-label,
+  .settings-account-status-value,
+  .settings-account-button-subtitle,
+  .library-empty-subtitle,
+  .library-loading-label,
+  .library-privacy-label,
+  .search-results-subtitle,
+  .catalog-order-subtitle,
+  .catalog-order-card-subtitle {
+    font-size: 13px;
+    line-height: 1.35;
+  }
+
+  /* Oversized glyphs and decorative icons */
+  .addons-large-row-icon,
+  .addons-large-row-tail,
+  .settings-nav-icon-material,
+  .settings-account-status-icon,
+  .settings-account-signout-icon,
+  .settings-account-button-icon {
+    font-size: 24px;
+  }
+
+  .settings-trakt-code {
+    font-size: 30px;
+  }
+
+  /* Settings nav pills + section headings */
+  .settings-nav-label {
+    font-size: 16px;
+  }
+
+  .settings-group-heading {
+    font-size: 22px;
+    line-height: 1.2;
+  }
+
+  .settings-account-button-title {
+    font-size: 16px;
+  }
+
+  /* Library "LOCAL" source eyebrow */
+  .library-page-source {
+    font-size: 13px;
+  }
+
+  /* Big feature cards (addons hub) are sized for a TV; tighten the padding so
+     they don't each fill the screen. */
+  .addons-large-row,
+  .addons-hero-card,
+  .catalog-order-card {
+    padding: 16px;
+    min-height: 0;
+    gap: 12px;
+  }
+
+  .addons-main,
+  .catalog-order-main {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  /* QR action buttons are 78px tall TV targets; size them for a thumb. */
+  .qr-action-btn {
+    height: 48px;
+    font-size: 15px;
+    padding: 0 22px;
+  }
+
+  /* Library grid: the poster size is written inline (~252px), so one poster
+     fills the row. Force a phone size for a proper multi-column grid. */
+  .library-grid {
+    --library-poster-width: 104px !important;
+    --library-poster-height: 156px !important;
+  }
+
   /* Empty states and section headers use TV-scale type; bring them down so they
      fit a phone without clipping. */
   .search-empty-state h2 {
